@@ -1,7 +1,7 @@
 <?php
-namespace Anetwork\Validation;
+namespace MahdiIDea\Validation;
 
-use Anetwork\Validation\ValidationMessages;
+use MahdiIDea\Validation\ValidationMessages;
 
 /**
  * @author Shahrokh Niakan <sh.niakan@anetwork.ir>
@@ -109,7 +109,7 @@ class ValidationRules
         $ibanReplaceValues = array();
 
         if (!empty($value)) {
-                $value = preg_replace('/[\W_]+/', '', strtoupper($value));
+            $value = preg_replace('/[\W_]+/', '', strtoupper($value));
 
             if (( 4 > strlen($value) ||  strlen($value) > 34 ) || ( is_numeric($value [ 0 ])  || is_numeric($value [ 1 ]) ) || ( ! is_numeric($value [ 2 ]) || ! is_numeric($value [ 3 ]) )) {
                 return false;
@@ -146,16 +146,16 @@ class ValidationRules
         return false;
     }
 
-   /**
-    * validate meliCode number
-    * @param $attribute
-    * @param $value
-    * @param $parameters
-    * @param $validator
-    * @author Shahrokh Niakan <sh.niakan@anetwork.ir>
-    * @since May 21, 2016
-    * @return boolean
-    */
+    /**
+     * validate meliCode number
+     * @param $attribute
+     * @param $value
+     * @param $parameters
+     * @param $validator
+     * @author Shahrokh Niakan <sh.niakan@anetwork.ir>
+     * @since May 21, 2016
+     * @return boolean
+     */
     public function MelliCode($attribute, $value, $parameters, $validator)
     {
         ValidationMessages::setCustomMessages( $validator );
@@ -200,8 +200,8 @@ class ValidationRules
      * @since June 13, 2016
      * @return boolean
      */
-     public function IsNotPersian($attribute, $value, $parameters, $validator)
-     {
+    public function IsNotPersian($attribute, $value, $parameters, $validator)
+    {
         ValidationMessages::setCustomMessages( $validator );
 
         if (is_string($value)) {
@@ -215,16 +215,16 @@ class ValidationRules
         return false;
     }
 
-   /**
-    * validate array with custom count of array
-    * @param $attribute
-    * @param $value
-    * @param $parameters
-    * @param $validator
-    * @author Shahrokh Niakan <sh.niakan@anetwork.ir>
-    * @since June 13, 2016
-    * @return boolean
-    */
+    /**
+     * validate array with custom count of array
+     * @param $attribute
+     * @param $value
+     * @param $parameters
+     * @param $validator
+     * @author Shahrokh Niakan <sh.niakan@anetwork.ir>
+     * @since June 13, 2016
+     * @return boolean
+     */
     public function LimitedArray($attribute, $value, $parameters, $validator)
     {
         ValidationMessages::setCustomMessages( $validator );
@@ -233,7 +233,7 @@ class ValidationRules
 
             if (isset($parameters[0])) {
 
-               return ( (count($value) <= $parameters[0]) ? true : false );
+                return ( (count($value) <= $parameters[0]) ? true : false );
 
             } else {
 
@@ -246,18 +246,18 @@ class ValidationRules
         return false;
     }
 
-  /**
-   * validate number to be unsigned
-   * @param $attribute
-   * @param $value
-   * @param $parameters
-   * @param $validator
-   * @author Shahrokh Niakan <sh.niakan@anetwork.ir>
-   * @since July 22, 2016
-   * @return boolean
-   */
-   public function UnSignedNum($attribute, $value, $parameters, $validator) 
-   {
+    /**
+     * validate number to be unsigned
+     * @param $attribute
+     * @param $value
+     * @param $parameters
+     * @param $validator
+     * @author Shahrokh Niakan <sh.niakan@anetwork.ir>
+     * @since July 22, 2016
+     * @return boolean
+     */
+    public function UnSignedNum($attribute, $value, $parameters, $validator)
+    {
         ValidationMessages::setCustomMessages( $validator );
 
         $this->status = (bool) preg_match('/^\d+$/', $value);
@@ -338,7 +338,7 @@ class ValidationRules
 
         if ( isset( $parameters[0] ) ) {
 
-          return ( $value > $parameters[0] ? true : false );
+            return ( $value > $parameters[0] ? true : false );
 
         }
 
@@ -361,7 +361,7 @@ class ValidationRules
 
         if ( isset( $parameters[0] ) ) {
 
-          return ( $value < $parameters[0] ? true : false );
+            return ( $value < $parameters[0] ? true : false );
 
         }
 
@@ -490,8 +490,8 @@ class ValidationRules
         ValidationMessages::setCustomMessages( $validator );
 
         $this->status = (bool) preg_match("/^([a-zA-Z]{1}[a-zA-Z\d_]*\.)+[a-zA-Z][a-zA-Z\d_]*$/", $value);
-        
+
         return $this->status;
-     }
+    }
 
 }

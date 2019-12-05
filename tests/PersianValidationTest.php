@@ -1,6 +1,6 @@
 <?php
 
-use Anetwork\Validation\ValidationRules as ValidationRules;
+use MahdiIDea\Validation\ValidationRules as ValidationRules;
 
 /**
  * unit test class
@@ -9,19 +9,19 @@ use Anetwork\Validation\ValidationRules as ValidationRules;
  */
 class PersianValidationTest extends PHPUnit_Framework_TestCase
 {
-	/**
-	 * @var null
-	 */
+    /**
+     * @var null
+     */
     protected $attribute;
 
-	/**
-	 * @var string
-	 */
+    /**
+     * @var string
+     */
     protected $value;
 
-	/**
-	 * @var array
-	 */
+    /**
+     * @var array
+     */
     protected $parameters;
 
     /**
@@ -29,18 +29,18 @@ class PersianValidationTest extends PHPUnit_Framework_TestCase
      */
     protected $validator;
 
-	/**
+    /**
      * @var object
-	 */
-	protected $PersianValidation;
+     */
+    protected $PersianValidation;
 
-	/**
-	 * create instance of ValidationRules class
-	 * @author Shahrokh Niakan <sh.niakan@anetwork.ir>
-	 * @since May 28, 2016
-	 * @return void
-	 */
-    public function __construct() 
+    /**
+     * create instance of ValidationRules class
+     * @author Shahrokh Niakan <sh.niakan@anetwork.ir>
+     * @since May 28, 2016
+     * @return void
+     */
+    public function __construct()
     {
         $this->PersianValidation = new ValidationRules();
     }
@@ -69,8 +69,8 @@ class PersianValidationTest extends PHPUnit_Framework_TestCase
         $this->value = "شاهرخ نیاکان";
 
         $this->assertEquals(true, $this->PersianValidation->Alpha($this->attribute, $this->value, $this->parameters, $this->validator));
-	    
-	    $this->value = "وَحِیُدّ‌الٍمٌاًسی";
+
+        $this->value = "وَحِیُدّ‌الٍمٌاًسی";
 
         $this->assertEquals(true, $this->PersianValidation->Alpha($this->attribute, $this->value, $this->parameters, $this->validator));
 
@@ -135,10 +135,10 @@ class PersianValidationTest extends PHPUnit_Framework_TestCase
         $this->value =  "۱۲۳۴ شاهرخ";
 
         $this->assertEquals(true, $this->PersianValidation->AlphaNum($this->attribute, $this->value, $this->parameters, $this->validator));
-	
-	    $this->value = "وَحِیُدّ‌الٍمٌاًسی";
-	    
-	    $this->assertEquals(true, $this->PersianValidation->AlphaNum($this->attribute, $this->value, $this->parameters, $this->validator));
+
+        $this->value = "وَحِیُدّ‌الٍمٌاًسی";
+
+        $this->assertEquals(true, $this->PersianValidation->AlphaNum($this->attribute, $this->value, $this->parameters, $this->validator));
 
     }
 
@@ -291,29 +291,29 @@ class PersianValidationTest extends PHPUnit_Framework_TestCase
     public function testIsNotPersian()
     {
 
-      $this->value = "شاهرخ۱۲۳۴";
+        $this->value = "شاهرخ۱۲۳۴";
 
-      $this->assertEquals(false, $this->PersianValidation->IsNotPersian($this->attribute, $this->value, $this->parameters, $this->validator));
+        $this->assertEquals(false, $this->PersianValidation->IsNotPersian($this->attribute, $this->value, $this->parameters, $this->validator));
 
-      $this->value = "shahrokh";
+        $this->value = "shahrokh";
 
-      $this->assertEquals(true, $this->PersianValidation->IsNotPersian($this->attribute, $this->value, $this->parameters, $this->validator));
+        $this->assertEquals(true, $this->PersianValidation->IsNotPersian($this->attribute, $this->value, $this->parameters, $this->validator));
 
-      $this->value = "Shahrokhشاهرخ۱۲۳۴";
+        $this->value = "Shahrokhشاهرخ۱۲۳۴";
 
-      $this->assertEquals(false, $this->PersianValidation->IsNotPersian($this->attribute, $this->value, $this->parameters, $this->validator));
+        $this->assertEquals(false, $this->PersianValidation->IsNotPersian($this->attribute, $this->value, $this->parameters, $this->validator));
 
-      $this->value = "shahrokhw3289834(!!!%$$(@_)_)_";
+        $this->value = "shahrokhw3289834(!!!%$$(@_)_)_";
 
-      $this->assertEquals(true, $this->PersianValidation->IsNotPersian($this->attribute, $this->value, $this->parameters, $this->validator));
+        $this->assertEquals(true, $this->PersianValidation->IsNotPersian($this->attribute, $this->value, $this->parameters, $this->validator));
 
-      $this->value = 1213131313131;
+        $this->value = 1213131313131;
 
-      $this->assertEquals(false, $this->PersianValidation->IsNotPersian($this->attribute, $this->value, $this->parameters, $this->validator));
+        $this->assertEquals(false, $this->PersianValidation->IsNotPersian($this->attribute, $this->value, $this->parameters, $this->validator));
 
-      $this->value = ["Shahrokh"];
+        $this->value = ["Shahrokh"];
 
-      $this->assertEquals(false, $this->PersianValidation->IsNotPersian($this->attribute, $this->value, $this->parameters, $this->validator));
+        $this->assertEquals(false, $this->PersianValidation->IsNotPersian($this->attribute, $this->value, $this->parameters, $this->validator));
 
     }
 
@@ -390,10 +390,10 @@ class PersianValidationTest extends PHPUnit_Framework_TestCase
         $this->value = "shahrokh 121";
 
         $this->assertEquals(false, $this->PersianValidation->AlphaSpace($this->attribute, $this->value, $this->parameters, $this->validator, $this->parameters, $this->validator));
-	    
-	    $this->value = "وَحِیُدّ‌الٍمٌاًسی";
-	    
-	    $this->assertEquals(true, $this->PersianValidation->AlphaSpace($this->attribute, $this->value, $this->parameters, $this->validator, $this->parameters, $this->validator));
+
+        $this->value = "وَحِیُدّ‌الٍمٌاًسی";
+
+        $this->assertEquals(true, $this->PersianValidation->AlphaSpace($this->attribute, $this->value, $this->parameters, $this->validator, $this->parameters, $this->validator));
 
     }
 
@@ -444,7 +444,7 @@ class PersianValidationTest extends PHPUnit_Framework_TestCase
         $this->value = "www.ad#le.com";
 
         $this->assertEquals(false, $this->PersianValidation->Domain($this->attribute, $this->value, $this->parameters, $this->validator));
-        
+
         $this->value = "www.adele.co,m";
 
         $this->assertEquals(false, $this->PersianValidation->Domain($this->attribute, $this->value, $this->parameters, $this->validator));
@@ -518,9 +518,9 @@ class PersianValidationTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals(false, $this->PersianValidation->IranPhone($this->attribute, $this->value, $this->parameters, $this->validator));
 
-		$this->value = '17236445';
+        $this->value = '17236445';
 
-		$this->assertEquals(false, $this->PersianValidation->IranPhone($this->attribute, $this->value, $this->parameters, $this->validator));
+        $this->assertEquals(false, $this->PersianValidation->IranPhone($this->attribute, $this->value, $this->parameters, $this->validator));
 
         $this->value = '37236445';
 
@@ -545,9 +545,9 @@ class PersianValidationTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals(false, $this->PersianValidation->IranPhoneWithAreaCode($this->attribute, $this->value, $this->parameters, $this->validator));
 
-		$this->value = '17236445';
+        $this->value = '17236445';
 
-		$this->assertEquals(false, $this->PersianValidation->IranPhoneWithAreaCode($this->attribute, $this->value, $this->parameters, $this->validator));
+        $this->assertEquals(false, $this->PersianValidation->IranPhoneWithAreaCode($this->attribute, $this->value, $this->parameters, $this->validator));
 
         $this->value = '37236445';
 
@@ -592,36 +592,36 @@ class PersianValidationTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(true, $this->PersianValidation->CardNumber($this->attribute, $this->value, $this->parameters, $this->validator));
     }
 
-	/**
-	 * unit test of alpha and special characters
-	 * @author Shahrokh Niakan <sh.niakan@anetwork.ir>
-	 * @since Oct 7, 2016
-	 * @return void
-	 */
-	public function testAdress()
-	{
+    /**
+     * unit test of alpha and special characters
+     * @author Shahrokh Niakan <sh.niakan@anetwork.ir>
+     * @since Oct 7, 2016
+     * @return void
+     */
+    public function testAdress()
+    {
 
-		$this->value = "Iran, Tehran - pardis";
+        $this->value = "Iran, Tehran - pardis";
 
-		$this->assertEquals(true, $this->PersianValidation->Address($this->attribute, $this->value, $this->parameters, $this->validator));
+        $this->assertEquals(true, $this->PersianValidation->Address($this->attribute, $this->value, $this->parameters, $this->validator));
 
-		$this->value = "ایران، تهران - پردیس";
+        $this->value = "ایران، تهران - پردیس";
 
-		$this->assertEquals(true, $this->PersianValidation->Address($this->attribute, $this->value, $this->parameters, $this->validator));
+        $this->assertEquals(true, $this->PersianValidation->Address($this->attribute, $this->value, $this->parameters, $this->validator));
 
-		$this->value = "Iran / Tehran / pardis / 16";
+        $this->value = "Iran / Tehran / pardis / 16";
 
-		$this->assertEquals(true, $this->PersianValidation->Address($this->attribute, $this->value, $this->parameters, $this->validator));
+        $this->assertEquals(true, $this->PersianValidation->Address($this->attribute, $this->value, $this->parameters, $this->validator));
 
-		$this->value = "ایران \ تهران \ پردیس \ ۱۶";
+        $this->value = "ایران \ تهران \ پردیس \ ۱۶";
 
-		$this->assertEquals(true, $this->PersianValidation->Address($this->attribute, $this->value, $this->parameters, $this->validator));
+        $this->assertEquals(true, $this->PersianValidation->Address($this->attribute, $this->value, $this->parameters, $this->validator));
 
-		$this->value = "Iran, Tehran & pardis";
+        $this->value = "Iran, Tehran & pardis";
 
-		$this->assertEquals(false, $this->PersianValidation->Address($this->attribute, $this->value, $this->parameters, $this->validator));
+        $this->assertEquals(false, $this->PersianValidation->Address($this->attribute, $this->value, $this->parameters, $this->validator));
 
-	}
+    }
 
     /**
      * unit test of iran postal code
@@ -664,7 +664,7 @@ class PersianValidationTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals(true, $this->PersianValidation->PackageName($this->attribute, $this->value, $this->parameters, $this->validator));
 
-         $this->value = "com.adele.adele";
+        $this->value = "com.adele.adele";
 
         $this->assertEquals(true, $this->PersianValidation->PackageName($this->attribute, $this->value, $this->parameters, $this->validator));
 

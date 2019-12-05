@@ -1,6 +1,6 @@
 <?php
 
-namespace Anetwork\Validation;
+namespace MahdiIDea\Validation;
 
 use Illuminate\Support\ServiceProvider;
 use Validator;

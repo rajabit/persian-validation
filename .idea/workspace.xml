@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3f6083a1-33d4-4d4a-865f-15435a492d5e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +55,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575541769411</updated>
-      <workItem from="1575541770608" duration="819000" />
+      <workItem from="1575541770608" duration="1313000" />
     </task>
+    <task id="LOCAL-00001" summary="fixed">
+      <created>1575542601597</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575542601597</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -65,11 +72,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="506" y="298" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1575541941761">
+    <state x="680" y="338" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575543984440">
       <screen x="0" y="27" width="2048" height="1068" />
     </state>
-    <state x="506" y="298" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.2048.1068@0.27.2048.1068" timestamp="1575541941761" />
+    <state x="680" y="338" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.2048.1068@0.27.2048.1068" timestamp="1575543984440" />
+    <state x="476" y="159" width="860" height="807" key="CommitChangelistDialog2" timestamp="1575542601539">
+      <screen x="0" y="27" width="2048" height="1068" />
+    </state>
+    <state x="476" y="159" width="860" height="807" key="CommitChangelistDialog2/0.27.2048.1068@0.27.2048.1068" timestamp="1575542601539" />
+    <state x="506" y="298" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1575542604345">
+      <screen x="0" y="27" width="2048" height="1068" />
+    </state>
+    <state x="506" y="298" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.2048.1068@0.27.2048.1068" timestamp="1575542604345" />
   </component>
 </project>
