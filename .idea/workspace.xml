@@ -3,13 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="3f6083a1-33d4-4d4a-865f-15435a492d5e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PersianValidationServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PersianValidationServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -56,6 +57,8 @@
       <option name="presentableId" value="Default" />
       <updated>1575541769411</updated>
       <workItem from="1575541770608" duration="1451000" />
+      <workItem from="1575544210775" duration="130000" />
+      <workItem from="1575557332893" duration="15000" />
     </task>
     <task id="LOCAL-00001" summary="fixed">
       <created>1575542601597</created>
@@ -71,7 +74,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575544020109</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed">
+      <created>1575544285195</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575544285195</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fixed">
+      <created>1575544313956</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575544313956</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,14 +104,18 @@
       <screen x="0" y="27" width="2048" height="1068" />
     </state>
     <state x="680" y="338" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.2048.1068@0.27.2048.1068" timestamp="1575543984440" />
-    <state x="976" y="66" width="860" height="807" key="CommitChangelistDialog2" timestamp="1575544285138">
+    <state x="976" y="66" width="860" height="807" key="CommitChangelistDialog2" timestamp="1575544313904">
       <screen x="0" y="27" width="2048" height="1068" />
     </state>
-    <state x="976" y="66" width="860" height="807" key="CommitChangelistDialog2/0.27.2048.1068@0.27.2048.1068" timestamp="1575544285138" />
-    <state x="506" y="298" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1575544286313">
+    <state x="976" y="66" width="860" height="807" key="CommitChangelistDialog2/0.27.2048.1068@0.27.2048.1068" timestamp="1575544313904" />
+    <state x="506" y="298" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1575544315365">
       <screen x="0" y="27" width="2048" height="1068" />
     </state>
-    <state x="506" y="298" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.2048.1068@0.27.2048.1068" timestamp="1575544286313" />
+    <state x="506" y="298" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.2048.1068@0.27.2048.1068" timestamp="1575544315365" />
+    <state x="670" y="296" width="707" height="528" key="find.popup" timestamp="1575557340752">
+      <screen x="0" y="27" width="2048" height="1068" />
+    </state>
+    <state x="670" y="296" width="707" height="528" key="find.popup/0.27.2048.1068@0.27.2048.1068" timestamp="1575557340752" />
     <state x="687" y="261" width="672" height="678" key="search.everywhere.popup" timestamp="1575544265155">
       <screen x="0" y="27" width="2048" height="1068" />
     </state>
