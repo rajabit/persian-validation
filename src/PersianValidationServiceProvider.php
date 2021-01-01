@@ -4,7 +4,6 @@ namespace MahdiIDea\Validation;
 
 use Illuminate\Support\ServiceProvider;
 use Validator;
-use App;
 
 /**
  * @author Shahrokh Niakan <sh.niakan@anetwork.ir>
@@ -49,7 +48,7 @@ class PersianValidationServiceProvider extends ServiceProvider
     {
         // publish lang file to resources/lang/validation
         $this->publishes([
-            __DIR__ . '/../lang/' . App::getLocale() . '.php' => resource_path('lang/validation/' . App::getLocale() . '.php'),
+            __DIR__ . '/../lang/' . app()->getLocale() . '.php' => resource_path('lang/validation/' . app()->getLocale() . '.php'),
         ]);
 
         foreach($this->validationRules as $name => $method)
