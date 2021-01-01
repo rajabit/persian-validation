@@ -1,7 +1,6 @@
 <?php
 namespace MahdiIDea\Validation;
 
-use App;
 
 /**
  * @author Shahrokh Niakan <sh.niakan@anetwork.ir>
@@ -35,7 +34,7 @@ class ValidationMessages
      */
     public function __construct()
     {
-        $this->lang = App::getLocale();
+        $this->lang = app()->getLocale();
 
         if(! file_exists(resource_path('lang/validation/' . $this->lang . '.php'))){
             $this->config = include __DIR__ . '/../lang/' . $this->lang . '.php';
@@ -55,11 +54,7 @@ class ValidationMessages
         self::$app = include __DIR__ . '/Config.php';
 
         if ( $validator ) {
-            if ( round(App::version(), 1) > self::$app['version'] ) {
-                self::$messages = $validator->customMessages;
-            } else {
-                self::$messages = $validator->getCustomMessages();
-            }
+            self::$messages = $validator->customMessages;
         }
     }
 
